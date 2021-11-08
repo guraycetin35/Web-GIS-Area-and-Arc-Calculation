@@ -1,7 +1,7 @@
 /**
  * Created by Güray on 30.10.2016.
  */
-//Global değişken tanımları
+//Global değişken tanımları ellipsiod types
 var elipsoid={
     "grs80":{
         "a":6378137,"b":6356752.314,"c":6399593.626,
