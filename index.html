@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Area and Arc Calculation on the Ellipsoid</title>
+    <link rel="stylesheet" type="text/css" href="sayfa.css">
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=XXXXX&callback" async defer></script>
+</head>
+<body onload="initialize();">
+<div id="map" style="width:600px; height: 400px;"></div>
+<div id="secenekler" align="center">
+    <table border="0" cellpadding="0" cellspacing="0" id="secenektablosu">
+        <tr>
+            <th colspan="3" style="background-color: #4aa2a2;">OPTIONS AND INPUTS</th>
+        </tr>
+        <tr>
+            <td>Ellipsoid :</td>
+            <td colspan="2">
+                <select class="input"  id="elipsoidlistesi">
+                    <option value="0">Choose a Ellipsoid</option>
+                    <option selected value="grs80">GRS80</option>
+                    <option value="hayford">HAYFORD</option>
+                    <option value="bessel">BESSEL</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Point 1</td>
+            <td><input  onkeyup="verigir('enlem1');" class="input" type="number" id="enlem1"></td>
+            <td><input onkeyup="verigir('boylam1');" class="input"  type="number" id="boylam1"></td>
+        </tr>
+        <tr>
+            <td>Point 2</td>
+            <td><input onkeyup="verigir('enlem2');" class="input" type="number" id="enlem2"></td>
+            <td><input onkeyup="verigir('boylam2');" class="input" type="number" id="boylam2"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td colspan="2">
+                <input type="button" class="buton"  id="alanhesapla" value="Calculate Area">
+                <input type="button" class="buton"  id="uzunlukhesapla" value="Calculate Length">
+                <input type="button" class="buton" id="temizle" onclick="formutemizle();" value="Clean">
+            </td>
+        </tr>
+    </table><hr style="border: 1px solid #378c8c; margin: 0;">
+    <table id="sonuctablosu">
+        <tr>
+            <th colspan="2" style="background-color: #4aa2a2;">RESULTS</th>
+        </tr>
+        <tr>
+            <td>Area</td>
+            <td id="alansonucu"></td>
+        </tr>
+        <tr>
+            <td>Length</td>
+            <td id="uzunluksonucu"></td>
+        </tr>
+    </table>
+</div>
+
+</body>
+</html>
+
+        <script language="JavaScript" charset="utf-8" type="text/javascript" src="geodesy.js"></script>
