@@ -1,0 +1,29 @@
+.map2{
+    position:absolute;
+    top:0;
+    left:0;
+    width:50%;
+    height:100%;
+    }
+
+#islemler{
+    position:fixed;
+    left: 50%;
+    top:0;
+    height:100%;
+    width:50%;
+    border-left: 3px solid;
+}
+#islemlertablosu
+{    width:100%;
+}
+#sonuctablosu
+{
+    width:100%
+}
+#islemlertablosu tr td , #islemlertablosu tr th {
+    border:0.3px solid grey;
+    padding:10px;
+    color:#a01c1c;
+}
+
